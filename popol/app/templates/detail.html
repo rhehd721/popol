@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="{{ popol.image.url }}" class="bd-placeholder-img rounded-circle" width="140" height="140">
+        <h2>{{popol.name}}</h2>
+        <p>{{popol.description}}</p>
+      </div>
+    </div>
+
+    <br>
+
+    <form method = "POST" action ="{%url 'create_comment' popol.id%}">
+        {% csrf_token %}
+        {{comment_form}}
+       <input type ="submit" value="확인">
+    </form>
+    
+
+{%endblock%}
