@@ -15,8 +15,8 @@ def accept(request):
     # login으로 POST 요청이 들어왔을 때, 로그인 절차를 밟는다.
     if request.method == 'POST':
         # login.html에서 넘어온 username과 password를 각 변수에 저장한다.
-        password = request.POST.get('password', '')
-        username = "admin"
+        password = request.POST.get('Password', '')
+        username = request.POST.get('Id', '')
 
         # 해당 username과 password와 일치하는 user 객체를 가져온다.
         user = auth.authenticate(request, username=username, password=password)
@@ -25,7 +25,7 @@ def accept(request):
         if user is not None:
             # 로그인 한다
             auth.login(request, user)
-            return redirect('home/')
+            return redirect('home')
         # 존재하지 않는다면
         else:
             # 딕셔너리에 에러메세지를 전달하고 다시 login.html 화면으로 돌아간다.

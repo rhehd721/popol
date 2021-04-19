@@ -19,7 +19,9 @@
 
             <form method="POST" action="{% url 'accept' %}">
                 {% csrf_token %}
-                <input class="user-password" type="text" name="password" />
+                <input class="user-password" type="text" name="Id" />
+                <input class="user-password" type="password" name="Password" />
+                <input class="user-password" type="submit" />
             </form>
 
         </div>
