@@ -3,17 +3,12 @@ from django.contrib.auth.models import User
 from django.contrib import auth
 from .models import PortFolio
 
-from pathlib import Path, os
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
 def enter(request):
     return render(request, './enter.html')
 
 def home(request):
     modle = PortFolio.objects.all()
-    return render(request, './home.html', {'modle' : modle, 'BASE_DIR' : BASE_DIR})
+    return render(request, './home.html', {'modle' : modle})
 
 def introduce(request):
     return render(request, './introduce.html')
