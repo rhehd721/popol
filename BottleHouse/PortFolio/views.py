@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
+from .models import PortFolio
 
 def enter(request):
     return render(request, './enter.html')
 
 def home(request):
-    return render(request, './home.html')
+    modle = PortFolio.objects.all()
+    return render(request, './home.html', {'modle' : modle})
 
 def introduce(request):
     return render(request, './introduce.html')
