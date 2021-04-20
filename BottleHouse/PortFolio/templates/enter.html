@@ -16,15 +16,22 @@
         <div class="user-login-box">
             <span class="user-icon"></span>
             <div class="user-name">Hello World! <br> This is Byeongho PortFolio</div>
-
             <form method="POST" action="{% url 'accept' %}">
                 {% csrf_token %}
-                <input class="user-password" type="text" name="Id" />
-                <input class="user-password" type="password" name="Password" />
-                <input class="user-password" type="submit" />
+                <input class="user-password" type="text" name="Id" placeholder="Id" onfocus="this.placeholder=''"
+                    onblur="this.placeholder='Id'" />
+                <input class="user-password" type="password" name="Password" placeholder="Pass Word"
+                    onfocus="this.placeholder=''" onblur="this.placeholder='PassWord'" />
+                <div id="submit">
+                    <input class="submit" type="submit" name="Login" value="Login" />
             </form>
-
+            <form method="POST" action="{% url 'guest' %}">
+                {% csrf_token %}
+                <input class="submit" type="submit" name="Guest" value="Guest" />
         </div>
+        </form>
+
+    </div>
     </div>
 
 </body>

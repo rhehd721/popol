@@ -33,3 +33,8 @@ def accept(request):
     # login으로 GET 요청이 들어왔을때, 로그인 화면을 띄워준다.
     else:
         return render(request, './enter.html')
+
+
+def guest(request):
+    if request.method == 'POST':
+        return redirect('home')
