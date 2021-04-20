@@ -26,14 +26,20 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <!-- 경계선 -->
             {% for modle_item in modle %}
+            {{BASE_DIR}}{{modle_item.image.url}}
+            <img src="{{BASE_DIR}}{{modle_item.image.url}}" width="50">
+            
+
             <div class="col">
                 <div class="card shadow-sm">
                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                            dy=".3em">{{modle_item.title}}</text>
+                        <!-- <rect width="100%" height="100%" fill="{{modle_item.image}}" /> -->
+
+                        <!-- <img src="{{BASE_DIR}}{{modle_item.image.url}}" width="50"> -->
+
+                        <text x="50%" y="50%" fill="#eceeef" dy=".3em">{{modle_item.title}}</text>
                     </svg>
 
                     <div class="card-body">

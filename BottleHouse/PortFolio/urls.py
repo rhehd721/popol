@@ -1,5 +1,8 @@
 from django.urls import path, include
 from . import views
+from django.conf import settings    # media
+from django.conf.urls.static import static    # media
+
 
 urlpatterns = [
     path('', views.enter, name = "enter"),
