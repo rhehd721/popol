@@ -9,7 +9,6 @@ class PortFolio(models.Model):
     git = models.CharField(max_length=200)
     date = models.DateTimeField()
     
-
     # model에 의해 새로운 객체가 생성될 때 이름을 title로 지정한다.
     def __str__(self):
         return self.title

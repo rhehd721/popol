@@ -40,3 +40,6 @@ def accept(request):
 def guest(request):
     if request.method == 'POST':
         return redirect('home')
+
+def Secret(request):
+    return render(request, './Secret.html')
