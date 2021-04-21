@@ -11,17 +11,39 @@
 <div class="back">
     <div class="text">
         <h2>{{detail_.title}}</h2>
-        {{detail_.contents}}
         <br>
-        {{detail_.awards}}
+        개발 기간 : {{detail_.term}}
+        <br><br>
+        프로젝트 개요 : {{detail_.summary}}
+        <br><br>
+        
+        
+        {% for skill in detail_.contents  %}
+        {{ skill }}
+        {% endfor %}
+        
+        설계 주안점 : {{detail_.contents}}
+        <br><br>
+        개발 환경 : {{detail_.development_environment}}
+        <br><br>
+        개발 언어 : {{detail_.development_language}}
+        <br><br>
+        라이브러리 : {{detail_.library}}
+        <br><br>
+        개발 도구 : {{detail_.tool}}
+        <br><br>
+        개발 장비 : {{detail_.equipment}}
+        <br><br>
+        주요역할 및 담당{{detail_.role}}
+        <br><br>
+        수상내역 : {{detail_.awards}}
+        <br><br>
+        깃허브 : {{detail_.git}}
+        <br><br>
         <br>
 
         <!-- <img src = "{{detail_.image.url}}" width="30px" height="30px"> -->
-        <br>
-        {{detail_.git}}
-        <br>
-        {{detail_.date | date:"Y-m-d"}}
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
     </div>
 </div>
 
