@@ -10,8 +10,8 @@ def home(request):
     modle = PortFolio.objects.all()
     return render(request, './home.html', {'modle' : modle})
 
-def introduce(request):
-    return render(request, './introduce.html')
+def detail(request):
+    return render(request, './detail.html')
 
 def accept(request):
     # login으로 POST 요청이 들어왔을 때, 로그인 절차를 밟는다.

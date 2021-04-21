@@ -13,13 +13,22 @@
     </title>
 
     <style>
+        a.detail:link {
+            color: #fff;
+        }
 
-		a.detail:link { color: #fff; }
-		a.detail:visited { color: #fff; }
-		a.detail:hover { color: rgba(255, 255, 255, 0.749); }
-		a.detail:active { color: rgba(255, 255, 255, 0.749); }
+        a.detail:visited {
+            color: #fff;
+        }
 
-	</style>
+        a.detail:hover {
+            color: rgba(255, 255, 255, 0.749);
+        }
+
+        a.detail:active {
+            color: rgba(255, 255, 255, 0.749);
+        }
+    </style>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
     <!-- CSS only -->
@@ -85,7 +94,7 @@
                             <br>
                             Library : TCP / IP, Tensorflow, Keras, OpenCv, Pandas, Qt5
                             <br><br>
-                            <a href="#" class="detail">More Detail</a>
+                            <a href="{% url 'detail' %}" class="detail">More Detail</a>
                         </p>
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
