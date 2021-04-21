@@ -8,12 +8,22 @@
 {% block contents %}
 
 
-{{detail_.title}}
-{{detail_.contents}}
-{{detail_.awards}}
-<img src = "{{detail_.image.url}}">
-{{detail_.git}}
-{{detail_.date | date:"Y-m-d"}}
+<div class="back">
+    <div class="text">
+        <h2>{{detail_.title}}</h2>
+        {{detail_.contents}}
+        <br>
+        {{detail_.awards}}
+        <br>
+
+        <!-- <img src = "{{detail_.image.url}}" width="30px" height="30px"> -->
+        <br>
+        {{detail_.git}}
+        <br>
+        {{detail_.date | date:"Y-m-d"}}
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+</div>
 
 
 {% block JS %}
