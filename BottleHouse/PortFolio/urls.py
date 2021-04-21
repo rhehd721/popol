@@ -10,4 +10,5 @@ urlpatterns = [
     path('accept/', views.accept, name = "accept"),
     path('home/', views.guest, name = "guest"),
     path('Secret/', views.Secret, name = "Secret"),
+    path('PortFolio_detail/<int:user_id>', views.PortFolio_detail, name = "PortFolio_detail"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

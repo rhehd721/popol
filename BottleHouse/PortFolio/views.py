@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import auth
 from .models import PortFolio
@@ -41,5 +41,10 @@ def guest(request):
     if request.method == 'POST':
         return redirect('home')
 
+def PortFolio_detail(request, user_id):
+    detail_ = get_object_or_404(PortFolio, pk = user_id)
+    return render (request, 'PortFolio_detail.html', {'detail_' : detail_})
+
+    
 def Secret(request):
     return render(request, './Secret.html')
