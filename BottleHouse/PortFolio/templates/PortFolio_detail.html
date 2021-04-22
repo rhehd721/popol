@@ -14,31 +14,41 @@
         <br>
         개발 기간 : {{detail_.term}}
         <br><br>
-        프로젝트 개요 : {{detail_.summary}}
+        Project outline
+        <br>{{detail_.summary}}
         <br><br>
-        
-        
-        {% for skill in detail_.contents  %}
-        {{ skill }}
+
+
+        {% for contents in detail_.contents  %}
+        {{contents}}
         {% endfor %}
-        
-        설계 주안점 : {{detail_.contents}}
+
+        Design focus
+        <br>{{detail_.contents}}
         <br><br>
-        개발 환경 : {{detail_.development_environment}}
+        Development Environment
+        <br>{{detail_.development_environment}}
         <br><br>
-        개발 언어 : {{detail_.development_language}}
+        Development_Language
+        <br>{{detail_.development_language}}
         <br><br>
-        라이브러리 : {{detail_.library}}
+        Library
+        <br>{{detail_.library}}
         <br><br>
-        개발 도구 : {{detail_.tool}}
+        Development_Tool
+        <br>{{detail_.tool}}
         <br><br>
-        개발 장비 : {{detail_.equipment}}
+        Development equipment
+        <br>{{detail_.equipment}}
         <br><br>
-        주요역할 및 담당{{detail_.role}}
+        Main Roles
+        <br>{{detail_.role}}
         <br><br>
-        수상내역 : {{detail_.awards}}
+        Awards
+        <br>{{detail_.awards}}
         <br><br>
-        깃허브 : {{detail_.git}}
+        Git
+        <br>{{detail_.git}}
         <br><br>
         <br>
 
