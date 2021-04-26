@@ -12,6 +12,7 @@
         Gourd_Bottle
     </title>
 
+
     <style>
         a.detail:link {
             color: #fff;
@@ -114,6 +115,8 @@
                     <img src="{% static 'images/tag.png' %}" height="25" width="25">
                     <strong> &nbsp;&nbsp; Gourd_Bottle</strong>
                 </a>
+                {% block Secret_btn %}
+                {% endblock %}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
                     aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" id="toggler">
                     <span class="navbar-toggler-icon"></span>
